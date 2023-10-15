@@ -18,6 +18,8 @@ use App\Http\Controllers\UserSearchHistoryController;
     return view('welcome');
 });*/
 
+
+
 Route::get('/', [UserSearchHistoryController::class, 'show'])->name('search');
 Route::get('/filter-search-history', [UserSearchHistoryController::class, 'filterSearchHistory'])->name('filter-search-history');
 
