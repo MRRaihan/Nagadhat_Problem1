@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserSearchHistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/search', [UserSearchHistoryController::class, 'show'])->name('search');
+Route::get('/filter-search-history', [UserSearchHistoryController::class, 'filterSearchHistory'])->name('filter-search-history');
+
