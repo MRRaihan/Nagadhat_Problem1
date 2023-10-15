@@ -14,10 +14,10 @@ use App\Http\Controllers\UserSearchHistoryController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/search', [UserSearchHistoryController::class, 'show'])->name('search');
+Route::get('/', [UserSearchHistoryController::class, 'show'])->name('search');
 Route::get('/filter-search-history', [UserSearchHistoryController::class, 'filterSearchHistory'])->name('filter-search-history');
 
